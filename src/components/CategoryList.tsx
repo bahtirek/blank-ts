@@ -20,10 +20,10 @@ const [category, setCategory] = useState('');
       onPress={() => setCategory(item.$id)}
       className='relative justify-center items-center'
     >
-      <View className='border border-gray-400 p-3 m-1 rounded-[20px]'>
+      <View className=' p-3 m-1 rounded-[20px]'>
         <ImageBackground 
           source={{uri: item.icon}}
-          className='w-12 h-12 overflow-hidden'
+          className='w-10 h-10 overflow-hidden'
           resizeMode='cover'
         />
       </View>

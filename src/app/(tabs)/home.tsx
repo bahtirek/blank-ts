@@ -7,8 +7,9 @@ import CategoryList from '@components/CategoryList'
 import EmptyState from '@components/common/EmptyState'
 import { getAllPosts, getLatestPosts } from 'lib/appwrite'
 import useAppwrite from 'lib/useAppwrite'
-import VideoCard from '@components/VideoCard'
 import { VideoCardType } from 'src/types'
+import icons from '@constants/icons'
+import GiftCard from '@components/GiftCard'
 
 const Home = () => {
 
@@ -28,20 +29,20 @@ const Home = () => {
         data={posts}
         keyExtractor={(item) => item.$id}
         renderItem={({item}) => (
-          <VideoCard videoCard={item} />
+          <GiftCard giftCard={item} />
         )}
         ListHeaderComponent={() => (
-          <View className='my-6 px-4 space-y-6'>
+          <View className='mt-6 px-4 space-y-6'>
             <View className='justify-between items-center flex-row mb-6'>
               <View className=''>
                 {/* <Text className='text-xs font-pregular text-gray-600'>Unwrap Joy, Anytime, Anywhere!</Text> */}
                 <Text className='text-xs font-pregular text-gray-600'>Your One-Stop Gift Card Shop!</Text>
-                <Text className='text-2xl font-psemibold text-red-600'>GiftCard Genie</Text>
+                <Text className='text-2xl font-psemibold text-orange-500'>GiftCard Genie</Text>
               </View>
               <View>
                 <Image 
-                  source={images.logo}
-                  className='w-20 h-10'
+                  source={icons.giftcard}
+                  className='w-20 h-14'
                   resizeMode='contain'
                 />
               </View>
@@ -51,9 +52,9 @@ const Home = () => {
 
 
             <View className='w-full flex-1'>
-              {/* <Text className='text-gray-100 text-lg font-pregular mb-3'>Latest videos</Text> */}
-
               <CategoryList categories={latestPosts}/>
+
+              <Text className='text-orange-500 text-lg font-pregular mt-7'>Trending</Text>
             </View>
           </View>
         )}
