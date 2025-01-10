@@ -41,7 +41,7 @@ const Home = () => {
               </View>
               <View>
                 <Image 
-                  source={icons.giftcard}
+                  source={icons.giftCard}
                   className='w-20 h-14'
                   resizeMode='contain'
                 />

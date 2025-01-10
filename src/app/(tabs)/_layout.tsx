@@ -12,12 +12,12 @@ const TabIcon = ({icon, color, name, focused}: {icon: object, color: ColorValue,
       tintColor={color}
       className='"w-6 h-6'
     />
-    <Text 
+    {/* <Text 
       className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`}
       style={{color: color}}
     >
       {name}
-    </Text>
+    </Text> */}
     </View>
   )
 }
@@ -29,12 +29,12 @@ const TabsLayout = () => {
         screenOptions={{
           tabBarShowLabel: false,
           tabBarActiveTintColor: '#FFA001',
-          tabBarInactiveTintColor: '#CDCDE0',
+          tabBarInactiveTintColor: '#6b7280',
           tabBarStyle: {
-            backgroundColor: '#161622',
+            height: 60,
+            backgroundColor: '#ffffff',
             borderTopWidth: 1,
-            borderTopColor: '#232533',
-            height: 84
+            borderTopColor: '#bcc0c7'
           }
         }}
       >
@@ -49,6 +49,7 @@ const TabsLayout = () => {
                 color={color}
                 name='Home'
                 focused={focused}
+                
               />
             )
           }}
@@ -69,15 +70,15 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
-          name='create'
+          name='basket'
           options={{
-            title: 'Create',
+            title: 'Basket',
             headerShown: false,
             tabBarIcon: ({color, focused}) => (
               <TabIcon 
-                icon={icons.plus}
+                icon={icons.basket}
                 color={color}
-                name='Create'
+                name='Basket'
                 focused={focused}
               />
             )

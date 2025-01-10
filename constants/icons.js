@@ -11,6 +11,8 @@ import logout from "../assets/icons/logout.png";
 import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
+import basket from "../assets/icons/basket.png";
+import giftCard from "../assets/icons/gift-card.png";
 
 export default {
   play,
@@ -26,4 +28,6 @@ export default {
   logout,
   eyeHide,
   eye,
+  basket,
+  giftCard
 };
